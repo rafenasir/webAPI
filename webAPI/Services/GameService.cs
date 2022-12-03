@@ -5,7 +5,7 @@ namespace webAPI.Services
 {
     public class GameService : IGameService
     {
-        public string CreateAsync(RequestParamters request)
+        public string GetResultAsync(RequestParamters request)
         {
             if (request.numberOfGames >= 1)
             {

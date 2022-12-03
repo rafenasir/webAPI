@@ -4,7 +4,8 @@ namespace webAPI.Interface
 {
     public interface IGameService
     {
-        public string CreateAsync(RequestParamters request);
+        public string GetResultAsync(RequestParamters request);
+
 
     }
 }

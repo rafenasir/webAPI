@@ -8,7 +8,7 @@ namespace webAPI.Controllers
 
     [ApiController]
     [Route("[controller]")]
-    public class GameController: ControllerBase
+    public class GameController : ControllerBase
     {
         private readonly IGameService _gameController;
 
@@ -17,10 +17,15 @@ namespace webAPI.Controllers
             _gameController = gameService;
         }
 
-        [HttpPost]
-        public IActionResult Post([FromBody] RequestParamters request)
+        [HttpGet]
+        public string Get(int number, string switchNeeded)
         {
-            return new OkObjectResult(_gameController.CreateAsync(request));
+            RequestParamters requestParamters = new RequestParamters
+            {
+                wantSwitch = switchNeeded,
+                numberOfGames = number
+            };
+            return _gameController.GetResultAsync(requestParamters);
         }
     }
 }
