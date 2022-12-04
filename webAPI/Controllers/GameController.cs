@@ -17,7 +17,7 @@ namespace webAPI.Controllers
             _gameController = gameService;
         }
 
-        [HttpGet]
+        [HttpGet("{number}/{switchNeeded}")]
         public string Get(int number, string switchNeeded)
         {
             RequestParamters requestParamters = new RequestParamters
