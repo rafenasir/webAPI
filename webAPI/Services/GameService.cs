@@ -31,7 +31,7 @@ namespace webAPI.Services
                     }
                     else
                     {
-                        return $"You won {win} Times and you Lost {lose} Times. As you Opted to Switch This shows you have won more than you lose.";
+                        return $"You won {win} Times and you Lost {lose} Times. As you Opted to Switch This shows you won more than you lose.";
                     }
                 }
                 else
@@ -111,7 +111,7 @@ namespace webAPI.Services
             return finalResult;
         }
 
-        ListItems openDoor(List<ListItems> list, int selectorNumber)
+        public ListItems openDoor(List<ListItems> list, int selectorNumber)
         {
             List<ListItems> newList = new List<ListItems>();
             ListItems openDoor = new ListItems();
