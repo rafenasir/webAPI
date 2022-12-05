@@ -133,7 +133,7 @@ namespace webAPI.Services
             return openDoor;
         }
 
-        private List<ListItems> CreateDisplayArray()
+        public List<ListItems> CreateDisplayArray()
         {
 
             List<ListItems> options = new List<ListItems>();
