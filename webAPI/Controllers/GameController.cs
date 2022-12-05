@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using webAPI.Interface;
 using webAPI.Parameters;
 
@@ -17,7 +18,7 @@ namespace webAPI.Controllers
             _gameController = gameService;
         }
 
-        [HttpGet("{number}/{switchNeeded}")]
+        [HttpGet]
         public string Get(int number, string switchNeeded)
         {
             RequestParamters requestParamters = new RequestParamters
@@ -25,7 +26,7 @@ namespace webAPI.Controllers
                 wantSwitch = switchNeeded,
                 numberOfGames = number
             };
-            return _gameController.GetResultAsync(requestParamters);
+            return  _gameController.GetResultAsync(requestParamters);
         }
     }
 }
